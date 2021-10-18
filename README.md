@@ -1,4 +1,4 @@
-# :wave: The Basics of GitHub 
+# :wave: The Basics of GitHub (DUC QUANG NGUYEN - Student ID: 150210921)
 
 ## 🤓 Course overview and learning outcomes 
 
