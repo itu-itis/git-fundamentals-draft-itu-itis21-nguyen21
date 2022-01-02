@@ -26,12 +26,18 @@
 		<link rel="stylesheet" type="text/css" href="15_11_2021.css" />
 	</head>
 	
-	<body>
+	<body onload="welcomeFunction();
+								document.body.style.backgroundColor='pink'"
+				onresize="document.body.style.backgroundColor='lightblue'" 
+				
+				onkeydown="document.body.style.backgroundColor='white'"
+				onkeyup="document.body.style.backgroundColor='lightyellow'" >
 		<p>
 			<strong> Introduction to Information Systems </strong>
 		</p>
 		
-		<p class = "centered">
+		<p class = "centered" 
+			 onmouseover="document.querySelector('.centered').style.font='bold 20pt arial,serif'">
 			<em>
 			Duc Quang Nguyen
 			<br>
@@ -40,18 +46,24 @@
 		</p>
 		
 		<p> Evolution of homo species </p>
-		<ul>
+		<ul id="unorderedL" 
+				onmouseover="document.getElementById('unorderedL').style.backgroundColor='purple'">
 			<li> Homo habilis (able man) </li>
 			<li> Homo erectus (upright man) </li>
 			<li> Homo neanderthalensis </li>
 			<li> Homo floresiensis </li>
 			<li> Homo sapiens </li>
-				<ul>
+				<ul onclick="this.style.backgroundColor='orange'">
 					<li> Homo sapiens sapiens </li>
 				</ul>
 		</ul>
 		
-		<h1><strong>Human Evolution</strong></h1>
+		<h1 onmouseover="this.style.color='orange';
+										 this.style.backgroundColor='lightgreen'"
+				onmouseout="this.style.color='red';
+										 this.style.backgroundColor='white'">
+			<strong>Human Evolution</strong>
+		</h1>
 		<p>
 			<img src="evolution-diagram.png" />
 		</p>
@@ -66,7 +78,10 @@
 		<p> This image is clickable, click on it and try.</p>
 		<p>
 			<a href="https://www.biologyonline.com/dictionary/homo-sapiens-sapiens">
-				<img src="evolution-diagram.png" />
+				<img id="myImg" alt="Evolution diagram"
+						 onclick="alert(document.getElementById('myImg')" 
+						 src="evolution-diagram.png" 
+				/>
 			</a>
 		</p>
 		
@@ -109,4 +124,10 @@
 					monkeys.
 		</pre>
 	</body>
+	
+	<script>
+		function welcomeFunction() {
+			alert("Welcome!");
+		}
+	</script>
 </html>
